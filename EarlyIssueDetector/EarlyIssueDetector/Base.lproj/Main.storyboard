@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17504.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EarlyIssueDetector" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wG8-Xx-DdG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IbD-Dl-4pJ">
+                                <rect key="frame" x="78" y="44" width="257" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.2470588235" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="257" id="Dnh-d0-vPy"/>
+                                    <constraint firstAttribute="height" constant="44" id="tBK-ek-gvf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="21"/>
+                                <state key="normal" title="Connect Medical Records">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18" scale="large" weight="black"/>
+                                </state>
+                                <connections>
+                                    <action selector="ConnectMedicalRecords_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FsH-OB-Hbb"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Capture" translatesAutoresizingMaskIntoConstraints="NO" id="uDC-zP-1SH">
+                                <rect key="frame" x="52" y="205" width="311" height="486"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbO-Ii-VNv">
+                                <rect key="frame" x="78" y="818" width="257" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.24705882352941178" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="NOe-D4-27C"/>
+                                    <constraint firstAttribute="width" constant="257" id="zIU-sU-I1h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="21"/>
+                                <state key="normal" title="Capture Image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18" scale="large" weight="black"/>
+                                </state>
+                                <connections>
+                                    <action selector="ScreenShotButton_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CMu-GN-7ZE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qg6-Yk-09H">
+                                <rect key="frame" x="46" y="115" width="323" height="34"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
+                                <state key="normal" title="Enter Symptoms For Better Results">
+                                    <color key="titleColor" red="0.0" green="0.2470588235" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vL5-BI-GW3" kind="presentation" id="Nre-yM-uXk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wbO-Ii-VNv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="78" id="02B-4A-z5N"/>
+                            <constraint firstAttribute="bottom" secondItem="wG8-Xx-DdG" secondAttribute="bottom" id="18q-T3-ShI"/>
+                            <constraint firstItem="wG8-Xx-DdG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4Fb-47-6mv"/>
+                            <constraint firstItem="wG8-Xx-DdG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5do-tv-E5m"/>
+                            <constraint firstItem="IbD-Dl-4pJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AP5-bH-OY0"/>
+                            <constraint firstItem="uDC-zP-1SH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="Epd-8q-3an"/>
+                            <constraint firstItem="qg6-Yk-09H" firstAttribute="top" secondItem="IbD-Dl-4pJ" secondAttribute="bottom" constant="27" id="KKU-ZL-DsF"/>
+                            <constraint firstItem="wG8-Xx-DdG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VMD-A2-uwM"/>
+                            <constraint firstItem="uDC-zP-1SH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="161" id="Z2s-My-VbT"/>
+                            <constraint firstItem="IbD-Dl-4pJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="78" id="ZaF-ht-baR"/>
+                            <constraint firstItem="wbO-Ii-VNv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="btx-wW-eAf"/>
+                            <constraint firstItem="qg6-Yk-09H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="dla-E2-sLv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uDC-zP-1SH" secondAttribute="trailing" constant="51" id="je5-OI-Bfi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uDC-zP-1SH" secondAttribute="bottom" constant="171" id="qSt-uT-hJq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qg6-Yk-09H" secondAttribute="trailing" constant="45" id="wYO-Iz-rFT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IbD-Dl-4pJ" secondAttribute="trailing" constant="79" id="xBX-NS-xkF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ConnectMedicalRecords" destination="IbD-Dl-4pJ" id="x7o-SR-3rP"/>
+                        <outlet property="ScreenShotButton" destination="wbO-Ii-VNv" id="iHv-it-bfn"/>
+                        <outlet property="Symptoms" destination="qg6-Yk-09H" id="tTB-Pt-Apd"/>
+                        <outlet property="sceneAR" destination="wG8-Xx-DdG" id="V9J-ty-cwP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Xy3-hZ-X31">
+            <objects>
+                <viewController id="vL5-BI-GW3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cet-PD-zMJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter your symptoms separated by a comma" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lgs-5U-A1j">
+                                <rect key="frame" x="87" y="214" width="240" height="414"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" red="0.0" green="0.2470588235" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symptoms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRb-ji-DhV">
+                                <rect key="frame" x="100" y="99" width="214" height="51"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="42"/>
+                                <color key="textColor" red="0.0" green="0.2470588235" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe Down To Finish" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhq-7W-RlQ">
+                                <rect key="frame" x="124" y="679" width="166" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.2470588235" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="v7z-0D-hE3"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <constraints>
+                            <constraint firstItem="v7z-0D-hE3" firstAttribute="trailing" secondItem="Uhq-7W-RlQ" secondAttribute="trailing" constant="124" id="5Ai-Hj-Lh0"/>
+                            <constraint firstItem="lgs-5U-A1j" firstAttribute="leading" secondItem="v7z-0D-hE3" secondAttribute="leading" constant="87" id="5Zd-Xh-grb"/>
+                            <constraint firstItem="Uhq-7W-RlQ" firstAttribute="leading" secondItem="v7z-0D-hE3" secondAttribute="leading" constant="124" id="6c6-9X-Pjy"/>
+                            <constraint firstItem="v7z-0D-hE3" firstAttribute="trailing" secondItem="lgs-5U-A1j" secondAttribute="trailing" constant="87" id="QcK-dS-Lf5"/>
+                            <constraint firstItem="lgs-5U-A1j" firstAttribute="top" secondItem="BRb-ji-DhV" secondAttribute="bottom" constant="64" id="W3j-LL-af5"/>
+                            <constraint firstItem="v7z-0D-hE3" firstAttribute="trailing" secondItem="BRb-ji-DhV" secondAttribute="trailing" constant="100" id="Wau-ob-mZj"/>
+                            <constraint firstItem="Uhq-7W-RlQ" firstAttribute="top" secondItem="lgs-5U-A1j" secondAttribute="bottom" constant="51" id="XYx-wj-Hh4"/>
+                            <constraint firstItem="lgs-5U-A1j" firstAttribute="top" secondItem="v7z-0D-hE3" secondAttribute="top" constant="214" id="mj3-8M-3vQ"/>
+                            <constraint firstItem="BRb-ji-DhV" firstAttribute="top" secondItem="v7z-0D-hE3" secondAttribute="top" constant="99" id="nga-SA-2XI"/>
+                            <constraint firstItem="BRb-ji-DhV" firstAttribute="leading" secondItem="v7z-0D-hE3" secondAttribute="leading" constant="100" id="qjf-NB-aG6"/>
+                            <constraint firstItem="v7z-0D-hE3" firstAttribute="bottom" secondItem="lgs-5U-A1j" secondAttribute="bottom" constant="180" id="uNO-RE-tmV"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZK-fb-TBn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900.00000000000011" y="24.776785714285712"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Capture" width="250" height="375"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
