@@ -61,7 +61,20 @@
                                     <color key="titleColor" red="0.0" green="0.2470588235" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
+                                    <action selector="Symptoms_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rX7-5X-PlS"/>
                                     <segue destination="vL5-BI-GW3" kind="presentation" id="Nre-yM-uXk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9J-W3-ZNZ">
+                                <rect key="frame" x="364" y="55" width="30" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="g9o-jl-T1k"/>
+                                    <constraint firstAttribute="width" constant="30" id="kll-Ly-SqP"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.2470588235" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" backgroundImage="pause.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="PausePlay_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HGB-Gd-DFt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -81,13 +94,16 @@
                             <constraint firstItem="wbO-Ii-VNv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="btx-wW-eAf"/>
                             <constraint firstItem="qg6-Yk-09H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="dla-E2-sLv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uDC-zP-1SH" secondAttribute="trailing" constant="51" id="je5-OI-Bfi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z9J-W3-ZNZ" secondAttribute="trailing" constant="20" id="mW9-ra-cSf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uDC-zP-1SH" secondAttribute="bottom" constant="171" id="qSt-uT-hJq"/>
+                            <constraint firstItem="z9J-W3-ZNZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="9" id="wOh-SF-p2L"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qg6-Yk-09H" secondAttribute="trailing" constant="45" id="wYO-Iz-rFT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IbD-Dl-4pJ" secondAttribute="trailing" constant="79" id="xBX-NS-xkF"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="ConnectMedicalRecords" destination="IbD-Dl-4pJ" id="x7o-SR-3rP"/>
+                        <outlet property="PausePlayButton" destination="z9J-W3-ZNZ" id="acz-00-a3I"/>
                         <outlet property="ScreenShotButton" destination="wbO-Ii-VNv" id="iHv-it-bfn"/>
                         <outlet property="Symptoms" destination="qg6-Yk-09H" id="tTB-Pt-Apd"/>
                         <outlet property="sceneAR" destination="wG8-Xx-DdG" id="V9J-ty-cwP"/>
@@ -97,10 +113,10 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--SymptomsView-->
         <scene sceneID="Xy3-hZ-X31">
             <objects>
-                <viewController id="vL5-BI-GW3" sceneMemberID="viewController">
+                <viewController title="SymptomsView" id="vL5-BI-GW3" customClass="SymptomsView" customModule="EarlyIssueDetector" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cet-PD-zMJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,6 +157,9 @@
                             <constraint firstItem="v7z-0D-hE3" firstAttribute="bottom" secondItem="lgs-5U-A1j" secondAttribute="bottom" constant="180" id="uNO-RE-tmV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="TextBox" destination="lgs-5U-A1j" id="lp3-6z-xTW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZZK-fb-TBn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -149,6 +168,7 @@
     </scenes>
     <resources>
         <image name="Capture" width="250" height="375"/>
+        <image name="pause.fill" catalog="system" width="116" height="128"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

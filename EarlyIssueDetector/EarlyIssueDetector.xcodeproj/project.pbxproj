@@ -16,6 +16,7 @@
 		23434D9C2549160000E48227 /* AIView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23434D9B2549160000E48227 /* AIView.storyboard */; };
 		23434DA02549165F00E48227 /* AIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23434D9F2549165F00E48227 /* AIViewController.swift */; };
 		235C3A052548FA540031C98E /* Coaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235C3A042548FA540031C98E /* Coaching.swift */; };
+		23B2C390254B9AA1002BEADA /* SymptomsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B2C38F254B9AA1002BEADA /* SymptomsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		23434D9B2549160000E48227 /* AIView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AIView.storyboard; sourceTree = "<group>"; };
 		23434D9F2549165F00E48227 /* AIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIViewController.swift; sourceTree = "<group>"; };
 		235C3A042548FA540031C98E /* Coaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coaching.swift; sourceTree = "<group>"; };
+		23B2C38F254B9AA1002BEADA /* SymptomsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		232912D72548F23A00D81FF8 /* EarlyIssueDetector */ = {
 			isa = PBXGroup;
 			children = (
+				23B2C38F254B9AA1002BEADA /* SymptomsView.swift */,
 				23434D9B2549160000E48227 /* AIView.storyboard */,
 				232912D82548F23A00D81FF8 /* AppDelegate.swift */,
 				232912DA2548F23A00D81FF8 /* SceneDelegate.swift */,
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23B2C390254B9AA1002BEADA /* SymptomsView.swift in Sources */,
 				232912DD2548F23A00D81FF8 /* ViewController.swift in Sources */,
 				235C3A052548FA540031C98E /* Coaching.swift in Sources */,
 				232912D92548F23A00D81FF8 /* AppDelegate.swift in Sources */,
