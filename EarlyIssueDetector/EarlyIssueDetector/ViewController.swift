@@ -60,10 +60,64 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
     }
     @IBAction func ConnectMedicalRecords_Clicked(_ sender: Any) {
-        let myUrl = "https://fhir.epic.com/Developer/Index"
-           if let url = URL(string: "\(myUrl)"), !url.absoluteString.isEmpty {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-           }
+        //    let parameters = ["id": 13, "name": "jack"]
+        //let jsonIdentifier = ["use": "usual","system": "urn:oid:2.16.840.1.113883.4.1","value": "456-82-9876"]
+        //let jsonName = ["use": "usual", "text": "Create Lufhir", "family": "Lufhir", "given": ["Create"]] as [String : Any]
+        //let jsonRequest = ["resourceType": "Patient", "identifier": jsonIdentifier, "name": jsonName, "gender": "male",
+        //                   "birthDate": "1998-06-12"] as [String : Any]
+       let params = """
+        {
+        "resourceType": "Patient",
+        "identifier": [
+        {
+        "use": "usual",
+        "system": "urn:oid:2.16.840.1.113883.4.1",
+        "value": "249-82-5928"
+        }
+        ],
+        "name": [
+        {
+        "use": "usual",
+        "text": "Create Lufhir",
+        "family": "Lufhir",
+        "given": [
+        "Create"
+        ]
+        }
+        ],
+        "gender": "male",
+        "birthDate": "1998-06-12
+        """
+        let url = URL(string: "https://fhir.epic.com/interconnect-fhir-oauth/82995619-4b42-498b-b118-289314288936/api/FHIR/R4/Patient")!
+
+        var request = URLRequest(url: url)
+        request.setValue("application/json", forHTTPHeaderField: "charset=utf-8")
+        request.httpMethod = "POST"
+        //request.httpBody = parameters.percentEncoded()
+
+        request.httpBody = params.data(using: String.Encoding.utf8)
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data,
+                let response = response as? HTTPURLResponse,
+                error == nil else {                                              // check for fundamental networking error
+                print("error", error ?? "Unknown error")
+                return
+            }
+
+            guard (200 ... 299) ~= response.statusCode else {                    // check for http errors
+                print("statusCode should be 2xx, but is \(response.statusCode)")
+                print("response = \(response)")
+                print(String(decoding: data, as: UTF8.self))
+                return
+            }
+
+            //let responseString = String(data: data, encoding: .utf8)
+            //print("responseString = \(responseString)")
+        }
+
+        task.resume()
+
     }
     @IBAction func ScreenShotButton_Clicked(_ sender: Any) {
         sceneAR.debugOptions = []
